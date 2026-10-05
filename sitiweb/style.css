@@ -1,0 +1,183 @@
+body {
+    background: linear-gradient(135deg, #0f172a, #1e1b4b);
+    color: #000000;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px 0;
+    font-family: 'Poppins';
+}
+h1 {
+    text-align: center;
+    color: #191919;
+    font-family: 'Arsenica', serif;
+    font-size: 50px;
+    margin-top: 20px;
+}
+#layer {
+    background-color:#7890f0;
+    max-width: 1800px;                     /* Blocca la larghezza orizzontale */
+    margin: 0 auto;                        /* CENTRA tutto orizzontalmente */
+    padding: 020px;
+    display: flex;
+    flex-direction: column;                /* Dispone le sezioni dall'alto verso il basso */
+    gap: 100px;                             /* Spazio verticale uniforme tra i blocchi */
+}
+
+/* Titolo Benvenuto */
+#benvenuti {
+    background-color: rgba(37, 47, 99, 0.475);
+    padding: 30px; 
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #f8f6f6;
+}
+
+/* Contenitore Flexbox che affianca Card e Foto */
+#presentazione {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+#presentazione img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Rettangolo bianco limitato attorno al testo */
+#cardpresentazione {
+    background: linear-gradient(-135deg, #ffffff, #ecebee90);
+    padding: 30px; 
+    border-radius: 16px;                     /* Angoli arrotondati */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    flex: 1;
+    max-width: 550px;                        /* Impedisce che diventi troppo largo */
+}
+
+#cardfrase {
+    background-color: rgba(37, 47, 99, 0.475);
+    padding: 30px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    flex: 1;   
+    margin: 500px auto;                       /* CENTRA la card orizzontalmente nello schermo e la stacca sopra/sotto */
+}
+
+#frase {
+    font-size: 22px;
+    line-height: 1.5;
+    margin: -200px 0 15px 0;
+    color: #f8f6f6;                          /* Colore chiaro per leggere bene */
+    text-align: center;                      /* CENTRA la scritta dentro la card */
+}
+/* Stile del testo dentro il rettangolo */
+#cardpresentazione{
+    color: #1a1b41;                         /* Testo scuro per leggere bene */
+    font-size: 22px;
+    line-height: 1.5;
+    margin: 0 0 15px 0;
+    position: relative;       /* Necessario per attivare lo z-index */
+    z-index: 10;              /* Porta la card e i suoi link SOPRA a tutto il resto */
+}
+
+.link-mappa {
+    color: #eff0f2;            /* Colore blu acceso */
+    text-decoration: none;     /* Rimuove la sottolineatura standard */
+    font-weight: bold;
+}
+
+.link-mappa:hover {
+    text-decoration: underline; /* Sottolinea solo quando ci passi sopra col mouse */
+}
+
+/* --- CONTENITORE GENERALE DELLA SEZIONE COMPETENZE --- */
+#sezione-competenze {
+    display: flex;
+    flex-direction: column;   /* Mette la card sopra e i loghi sotto */
+    align-items: center;       /* Centra tutto orizzontalmente nella pagina */
+    gap: 30px;                /* Spazio verticale tra la card bianca e le icone */
+    margin: -400px auto 40px;    /* 60px di distanza dal blocco sopra, 'auto' centra nella pagina */
+    max-width: 1100px;
+}
+
+/* --- CARD BIANCA CON IL TESTO DELLE COMPETENZE --- */
+#cardcompetenze {
+    background-color: rgba(255, 255, 255, 0.95); /* Sfondo bianco della card */
+    color: #1a1b41;                             /* Colore testo scuro */
+    padding: 30px;                              /* Spazio interno tra testo e bordo */
+    border-radius: 16px;                        /* Angoli arrotondati */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Ombra morbida */
+    max-width: 550px;                           /* Larghezza contenuta */
+    width: 100%;                                /* Si adatta agli schermi piccoli */
+}
+#cardpresentazione p:last-child {
+    margin-bottom: 0;
+}
+
+/* Immagine affiancata a destra */
+img {
+    width: 360px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    flex-shrink: 0;
+}
+
+/* --- CONTENITORE PER LE TRE ICONE (FLEXBOX) --- */
+#fotoc {
+    display: flex;             /* Affianca le immagini una accanto all'altra */
+    justify-content: center;   /* Centra il gruppo di immagini */
+    align-items: center;       /* Allinea le immagini in altezza */
+    gap: 25px;                 /* Spazio tra un'immagine e l'altra (NO MARGINI FISSI) */
+}
+
+/* --- STILE ICONA C++ (id="foto2") --- */
+#foto2 {
+    width: 120px;              /* Larghezza specifica per C++ */
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(17, 0, 254, 0.4); /* Ombra bluastra per C++ */
+}
+
+/* --- STILE ICONA JAVA (id="foto3") --- */
+#foto3 {
+    width: 130px;              /* Dimensioni personalizzate per Java */
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.5); /* Ombra chiara per Java */
+}
+
+/* --- STILE ICONA HTML (id="foto4") --- */
+#foto4 {
+    width: 120px;              /* Dimensioni personalizzate per HTML */
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(255, 149, 0, 0.5); /* Ombra arancione per HTML */
+}
+
+/* REGOLA PER SCHERMI PICCOLI (TELEFONI) */
+@media (max-width: 768px) {
+    /* Dispone testo e foto uno sotto l'altro invece che affiancati */
+    #presentazione, #sezione-competenze {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Riduce i margini per far stare tutto nello schermo del telefono */
+    .contenitore-principale {
+        padding: 10px;
+    }
+
+    #foto {
+        max-width: 80%; /* Scala la foto per non farla uscire dallo schermo */
+        height: auto;
+    }
+}

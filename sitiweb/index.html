@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sito di Gabriel</title>
+    <style>
+        /* --- STILI GENERALI --- */
+        body {
+            background: linear-gradient(135deg, #0f172a, #1e1b4b);
+            color: #ffffff;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #layer {
+            background-color: #7890f0;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            border-radius: 12px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #191919;
+            font-family: 'Arsenica', serif, sans-serif;
+            font-size: 45px;
+            margin: 10px 0;
+        }
+
+        #benvenuti {
+            background-color: rgba(37, 47, 99, 0.475);
+            padding: 20px; 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            font-size: 24px;
+            color: #f8f6f6;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        /* --- SEZIONE PRESENTAZIONE --- */
+        #presentazione {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        #cardpresentazione {
+            background: linear-gradient(-135deg, #ffffff, #ecebee);
+            padding: 30px; 
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            flex: 1;
+            min-width: 280px;
+            max-width: 550px;
+            color: #1a1b41;
+            font-size: 18px;
+            line-height: 1.6;
+            position: relative;
+            z-index: 10;
+        }
+
+        #cardpresentazione ul {
+            padding-left: 20px;
+        }
+
+        .link-github {
+            display: inline-block;
+            margin: 10px 0;
+            color: #0d6efd;
+            font-weight: bold;
+            position: relative;
+            z-index: 20;
+        }
+
+        #foto {
+            width: 300px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            object-fit: cover;
+        }
+
+        /* --- FRASE D'IMPATTO --- */
+        #cardfrase {
+            background-color: rgba(37, 47, 99, 0.8);
+            padding: 20px; 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            margin: 0 auto;
+            border-radius: 12px;
+            text-align: center;
+            color: #f8f6f6;
+        }
+
+        #cardfrase h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        /* --- SEZIONE COMPETENZE --- */
+        #sezione-competenze {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            margin: 0 auto;
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        #cardcompetenze {
+            background-color: rgba(255, 255, 255, 0.95);
+            color: #1a1b41;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            max-width: 550px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* --- LOGHI LINGUAGGI --- */
+        #fotoc {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        #foto2, #foto3, #foto4 {
+            height: auto;
+            border-radius: 12px;
+        }
+
+        #foto2 { width: 100px; box-shadow: 0 8px 20px rgba(17, 0, 254, 0.4); }
+        #foto3 { width: 110px; box-shadow: 0 8px 20px rgba(255, 255, 255, 0.5); }
+        #foto4 { width: 100px; box-shadow: 0 8px 20px rgba(255, 149, 0, 0.5); }
+
+        /* --- GOOGLE MAPS FOOTER --- */
+        .info-mappa {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .link-mappa {
+            color: #1a1b41;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        /* --- RESPONSIVE PER TABLET E TELEFONI --- */
+        @media (max-width: 768px) {
+            #presentazione {
+                flex-direction: column;
+                text-align: left;
+            }
+
+            #layer {
+                padding: 10px;
+                gap: 25px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            #cardpresentazione, #cardcompetenze {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="layer">
+        <h1>GABRIEL SALVATORI</h1>
+        
+        <div id="benvenuti">
+            <p style="margin: 0;">CHI SONO?</p>
+        </div>
+
+        <div id="presentazione">
+            <div id="cardpresentazione">
+                <p>mi chiamo gabriel e sono un ragazzo di 17 anni che frequenta l'istituto tecnico iti faraday sto al 5 anno di informatica.</p>
+                <ul>
+                    <li>mi piace la programmazione</li>
+                    <li>cucinare e entrare in contatto con la gastronomia</li>
+                    <li>creo siti web e server per giochi</li>
+                    <li>ho avuto esperienza con vari linguaggi di programmazione come java, c++, assembly</li>
+                </ul>
+                <p>sto studiando per diventare un ingegnere informatico. qui sotto troverete il mio account per git hub:</p>
+                <a href="https://github.com/gabrielsalvatori08-source" target="_blank" class="link-github">Vedi il mio account GitHub 🚀</a>
+                <p>ho passato 2 settimane a dublino per un pcto della scuola, il mio livello in inglese è b2</p>
+                <p>mi so adattare a qualsiasi contesto sotto stress per cercare di trovare la soluzione migliore il quale implica un approccio critico e metodico.</p>
+            </div>
+
+            <!-- Se il tuo file immagine sul PC si chiama "foto io.jpg", lascia "foto io.jpg" -->
+            <img src="foto-io.jpg" alt="foto di gabriel" id="foto">
+        </div>
+
+        <div id="cardfrase">
+            <h2>datemi un compito e io lo svolgo!</h2>
+        </div>
+        
+        <div id="sezione-competenze">
+            <div id="cardcompetenze">
+                <h2 style="margin-top: 0;">COMPETENZE</h2>
+                <p>Queste sono le mie competenze in ambito informatico:</p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Java</li>
+                    <li>C++</li>
+                    <li>Assembly</li>
+                </ul>
+            </div>
+
+            <div id="fotoc">
+                <img src="cpp.png" alt="foto di c++" id="foto2">
+                <img src="java.jpg" alt="foto di java" id="foto3">
+                <img src="html.png" alt="foto di html" id="foto4">
+            </div>
+        </div>
+
+        <p class="info-mappa"> Frequento l'ITI Faraday a Roma: 
+           <a href="https://www.google.com/maps/place/Istituto+Tecnico+Industriale+%22Michael+Faraday%22/@41.7418838,12.28631,17z" target="_blank" class="link-mappa">
+               Vedi la posizione su Google Maps 📍
+           </a>
+        </p>
+    </div>
+
+</body>
+</html>
